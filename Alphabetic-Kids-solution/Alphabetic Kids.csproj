@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCEED174-5F7D-489C-B926-1D2E80123A6C}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alphabetic_Kids</RootNamespace>
+    <AssemblyName>Alphabetic Kids</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Alphabetic Kids_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>93b32fc7</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CursiveWriting.xaml.cs">
+      <DependentUpon>CursiveWriting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralKnowleage.xaml.cs">
+      <DependentUpon>GeneralKnowleage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GK\Animals.xaml.cs">
+      <DependentUpon>Animals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GK\colors.xaml.cs">
+      <DependentUpon>colors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GK\Shapes.xaml.cs">
+      <DependentUpon>Shapes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LKG Maths\num1to50.xaml.cs">
+      <DependentUpon>num1to50.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LKG Maths\subtraction.xaml.cs">
+      <DependentUpon>subtraction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LKG Maths\addition.xaml.cs">
+      <DependentUpon>addition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LKG Maths\number_comparison.xaml.cs">
+      <DependentUpon>number_comparison.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LKG Maths\lkg_maths.xaml.cs">
+      <DependentUpon>lkg_maths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayGroup\English\Alphabets\alphabets.xaml.cs">
+      <DependentUpon>alphabets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayGroup\English\playgroup_alphabets.xaml.cs">
+      <DependentUpon>playgroup_alphabets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayGroup\Maths\basics of maths.xaml.cs">
+      <DependentUpon>basics of maths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayGroup\Maths\Numbers\numbers.xaml.cs">
+      <DependentUpon>numbers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="poemsandstories.xaml.cs">
+      <DependentUpon>poemsandstories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table\tableof10.xaml.cs">
+      <DependentUpon>tableof10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table\tableof5.xaml.cs">
+      <DependentUpon>tableof5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UKG Maths\div.xaml.cs">
+      <DependentUpon>div.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UKG Maths\multi.xaml.cs">
+      <DependentUpon>multi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UKG Maths\ukg_maths.xaml.cs">
+      <DependentUpon>ukg_maths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UKG.xaml.cs">
+      <DependentUpon>UKG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LKG.xaml.cs">
+      <DependentUpon>LKG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Playgroup.xaml.cs">
+      <DependentUpon>Playgroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main_page.xaml.cs">
+      <DependentUpon>Main_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Common\NavigationHelper.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\ObservableDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\95-icon.png" />
+    <Content Include="Assets\SplashScreen.scale-140.png" />
+    <Content Include="Cursive\big\animation_a.avi" />
+    <Content Include="Cursive\big\animation_c.avi" />
+    <Content Include="Cursive\big\animation_e.avi" />
+    <Content Include="Cursive\big\animation_f.avi" />
+    <Content Include="Cursive\big\animation_g.avi" />
+    <Content Include="Cursive\big\animation_h.avi" />
+    <Content Include="Cursive\big\animation_k.avi" />
+    <Content Include="Cursive\big\animation_m.avi" />
+    <Content Include="Cursive\big\animation_n.avi" />
+    <Content Include="Cursive\big\animation_o.avi" />
+    <Content Include="Cursive\big\animation_p.avi" />
+    <Content Include="Cursive\big\animation_q.avi" />
+    <Content Include="Cursive\big\animation_r.avi" />
+    <Content Include="Cursive\big\animation_u.avi" />
+    <Content Include="Cursive\big\animation_w.avi" />
+    <Content Include="Cursive\big\animation_x.avi" />
+    <Content Include="Cursive\small\animationl_a.avi" />
+    <Content Include="Cursive\small\animationl_b.avi" />
+    <Content Include="Cursive\small\animationl_c .avi" />
+    <Content Include="Cursive\small\animationl_e.avi" />
+    <Content Include="Cursive\small\animationl_f.avi" />
+    <Content Include="Cursive\small\animationl_g.avi" />
+    <Content Include="Cursive\small\animationl_h.avi" />
+    <Content Include="Cursive\small\animationl_i.avi" />
+    <Content Include="Cursive\small\animationl_j.avi" />
+    <Content Include="Cursive\small\animationl_k.avi" />
+    <Content Include="Cursive\small\animationl_l.avi" />
+    <Content Include="Cursive\small\animationl_m.avi" />
+    <Content Include="Cursive\small\animationl_n.avi" />
+    <Content Include="Cursive\small\animationl_o.avi" />
+    <Content Include="Cursive\small\animationl_p.avi" />
+    <Content Include="Cursive\small\animationl_q.avi" />
+    <Content Include="Cursive\small\animationl_r.avi" />
+    <Content Include="Cursive\small\animationl_s.avi" />
+    <Content Include="Cursive\small\animationl_t.avi" />
+    <Content Include="Cursive\small\animationl_u.avi" />
+    <Content Include="Cursive\small\animationl_v.avi" />
+    <Content Include="Cursive\small\animationl_w.avi" />
+    <Content Include="Cursive\small\animationl_x.avi" />
+    <Content Include="Cursive\small\animationl_y.avi" />
+    <Content Include="Cursive\small\animationl_z.avi" />
+    <Content Include="GK\Colors\black.png" />
+    <Content Include="GK\Colors\blue.png" />
+    <Content Include="GK\Colors\brown.png" />
+    <Content Include="GK\Colors\gray.png" />
+    <Content Include="GK\Colors\green.png" />
+    <Content Include="GK\Colors\orange.png" />
+    <Content Include="GK\Colors\pink.png" />
+    <Content Include="GK\Colors\purple.png" />
+    <Content Include="GK\Colors\red.png" />
+    <Content Include="GK\Colors\white.gif" />
+    <Content Include="GK\Colors\white.png" />
+    <Content Include="GK\Colors\yellow.png" />
+    <Content Include="GK\Shapes\circle.png" />
+    <Content Include="GK\Shapes\diamond.png" />
+    <Content Include="GK\Shapes\Hexagon.png" />
+    <Content Include="GK\Shapes\moon.png" />
+    <Content Include="GK\Shapes\Octagon.png" />
+    <Content Include="GK\Shapes\pentagon.png" />
+    <Content Include="GK\Shapes\rectangle.png" />
+    <Content Include="GK\Shapes\square.jpg" />
+    <Content Include="GK\Shapes\star.png" />
+    <Content Include="GK\Shapes\triangle.png" />
+    <Content Include="Images\1491563.jpg" />
+    <Content Include="Images\1801727.jpg" />
+    <Content Include="Images\animals.jpg" />
+    <Content Include="Images\color.png" />
+    <Content Include="Images\LKG.png" />
+    <Content Include="Images\playgroupposter1.jpg" />
+    <Content Include="Images\play_group.png" />
+    <Content Include="Images\RIGHT.png" />
+    <Content Include="Images\shapes.png" />
+    <Content Include="Images\UKG.png" />
+    <Content Include="Images\WRONG.jpg" />
+    <Content Include="Maths\add.mp4" />
+    <Content Include="Maths\com.mp4" />
+    <Content Include="Maths\div.mp4" />
+    <Content Include="Maths\multi.mp4" />
+    <Content Include="Maths\sub.mp4" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\A.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\B.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\C.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\D.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\E.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\F.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\G.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\H.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\I.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\J.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\K.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\L.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\M.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\N.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\O.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\P.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\Q.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\R.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\S.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\T.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\U.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\V.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\W.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\X.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\Y.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\alphabet_img\Z.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\A\AEROPLANE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\A\ANT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\A\APPLE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\A\AUSTRONAUGHT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\B\BAKER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\B\BALL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\B\BATBALL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\B\BETTERFLY.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\C\CAR.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\C\CAT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\C\COCK.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\C\Cup.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\D\DEER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\D\DOCTOR.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\D\DOG.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\D\DOG1.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\D\DRUMMER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\D\DUCK.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\E\EAR.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\E\EGG.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\E\ELEPHANT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\E\EYES.gif" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\F\FIREMAN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\F\FOX.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\F\FROG.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\F\FRUITS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\G\GLASS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\G\GOAT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\G\GUITER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\G\Gun.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\H\HAT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\H\HEN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\H\HORSE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\H\HOUSE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\I\ICECREAM.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\I\IGLOO.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\I\INKPOT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\I\Iron.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\J\JACK.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\J\JACKET.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\J\JAR.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\J\Jocker.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\J\JUDGE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\K\KANGARU.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\K\KARATEBOY.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\K\KEY.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\K\KITE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\L\LAMP.JPG" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\L\LION.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\L\LOCK.png" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\L\LOTUS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\M\MAN.gif" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\M\MANGOS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\M\MAT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\M\MONKEY.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\N\NEST.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\N\NIB.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\N\NOODLES.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\N\Nurse.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\O\OCTOPUS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\O\Octopus1.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\O\ORANGE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\O\OWL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\P\PARROT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\P\PEACOCK.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\P\PENCIL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\P\PENGUINE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\P\PHOTOGRAPHER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\Q\QUAIL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\Q\QUEUE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\Q\QUILL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\Q\QUILT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\R\RABBIT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\R\RAT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\R\RAT1.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\R\ROCKSTAR.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\R\ROSE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\R\Roses.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\S\SAILOR.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\S\SNAIL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\S\SOAP.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\S\SPOON.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\S\Sun.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\T\TEACHER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\T\TEDDY.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\T\TEDDY1.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\T\TIGER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\T\Tortoise.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\U\UMBRELLA.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\U\UNIFORM GIRLS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\U\URN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\U\UTENSILS.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\V\VAN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\V\VASE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\V\VOILEN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\V\Voilen1.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\V\Vulture.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\W\WAITER.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\W\WATCH.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\W\WELL.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\W\Wool.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\X\X RAY.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\X\XMAN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\X\XMAS TREE.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\y\YACHT.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\y\Yak.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\y\Yak5.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\y\YARN.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\y\YO YO.JPG" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\z\ZEBRA.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\z\ZERO.gif" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\z\ZIP.gif" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\z\ZOO ZOO.jpg" />
+    <Content Include="PlayGroup\English\Alphabets\AtoZ\z\ZOOKEEPER.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\1.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\2.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\3.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\4.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\5.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\6.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\7.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\8.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\9.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no1.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no2.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no3.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no4.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no5.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no6.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no7.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no8.jpg" />
+    <Content Include="PlayGroup\Maths\Numbers\num_imgs\no9.jpg" />
+    <Content Include="Poems\5 Green Bottles.mp4" />
+    <Content Include="Poems\5 Little Speckled Frogs.mp4" />
+    <Content Include="Poems\A Is For Apple.mp4" />
+    <Content Include="Poems\Are You Sleeping.mp4" />
+    <Content Include="Poems\Baba Baba Black Sheep.mp4" />
+    <Content Include="Poems\Bingo Song.mp4" />
+    <Content Include="Poems\Cobbler Cobbler Mend My Shoe.mp4" />
+    <Content Include="Poems\Family Finger Songs.mp4" />
+    <Content Include="Poems\Five Little Kittens.mp4" />
+    <Content Include="Poems\Five Little Monkeys Jumping On The Bed.mp4" />
+    <Content Include="Poems\Hey Diddle Diddle.mp4" />
+    <Content Include="Poems\Hickory Dickory Dock.mp4" />
+    <Content Include="Poems\Humpty Dumpty.mp4" />
+    <Content Include="Poems\I Am A Little Teapot.mp4" />
+    <Content Include="Poems\If You Are Happy.mp4" />
+    <Content Include="Poems\Jack And Jill.mp4" />
+    <Content Include="Poems\Johny Johny.mp4" />
+    <Content Include="Poems\Learn Transport.mp4" />
+    <Content Include="Poems\Learning Shapes Song.mp4" />
+    <Content Include="Poems\Lion and Unicorn.mp4" />
+    <Content Include="Poems\Little Bo-peep.mp4" />
+    <Content Include="Poems\Little Miss Muffet.mp4" />
+    <Content Include="Poems\Mary Mary Quite Contrary.mp4" />
+    <Content Include="Poems\Old King Cole.mp4" />
+    <Content Include="Poems\Old MacDonald Had A Farm.mp4" />
+    <Content Include="Poems\One Two Buckle My Shoe.mp4" />
+    <Content Include="Poems\Phonics ABC Songs.mp4" />
+    <Content Include="Poems\Rain Rain Go Away.mp4" />
+    <Content Include="Poems\Ringa Ringa Roses.mp4" />
+    <Content Include="Poems\Row Row Row Your Boat.mp4" />
+    <Content Include="Poems\Teddy Bear Song.mp4" />
+    <Content Include="Poems\The Farmer In The Dell.mp4" />
+    <Content Include="Poems\There Was A Old Women.mp4" />
+    <Content Include="Poems\Three Blind Mice.mp4" />
+    <Content Include="Poems\Three Little Kittens.mp4" />
+    <Content Include="Poems\Twinkle Twinkle Little Star.mp4" />
+    <Content Include="Poems\Two Little Dicky Birds.mp4" />
+    <Content Include="Poems\Vegetables Rhymes.mp4" />
+    <Content Include="Poems\Wheels On The Bus Go Round And Round.mp4" />
+    <Content Include="Poems\Wheels On The Bus.mp4" />
+    <Content Include="Poems\Where Is Thumbkin.mp4" />
+    <Content Include="Stories\crow who pritended.mp4" />
+    <Content Include="Stories\fox and crow.mp4" />
+    <Content Include="Stories\fox and grapes.mp4" />
+    <Content Include="Stories\greedy dog.mp4" />
+    <Content Include="Stories\hare and tortoise.mp4" />
+    <Content Include="Stories\king and his lazy subjects.mp4" />
+    <Content Include="Stories\silly goats.mp4" />
+    <Content Include="Stories\the capseller.mp4" />
+    <Content Include="Stories\the lion and mouse.mp4" />
+    <Content Include="Stories\thirsty crow.mp4" />
+    <Content Include="Table\10.jpg" />
+    <Content Include="Table\2.jpg" />
+    <Content Include="Table\3.jpg" />
+    <Content Include="Table\4.jpg" />
+    <Content Include="Table\5.jpg" />
+    <Content Include="Table\6.jpg" />
+    <Content Include="Table\7.jpg" />
+    <Content Include="Table\8.jpg" />
+    <Content Include="Table\9.jpg" />
+    <None Include="Common\ReadMe.txt" />
+    <None Include="Alphabetic Kids_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\DarkGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="CursiveWriting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralKnowleage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GK\Animals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GK\colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GK\Shapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LKG Maths\num1to50.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LKG Maths\subtraction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LKG Maths\addition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LKG Maths\number_comparison.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LKG Maths\lkg_maths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayGroup\English\Alphabets\alphabets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayGroup\English\playgroup_alphabets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayGroup\Maths\basics of maths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayGroup\Maths\Numbers\numbers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="poemsandstories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Table\tableof10.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Table\tableof5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UKG Maths\div.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UKG Maths\multi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UKG Maths\ukg_maths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UKG.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LKG.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Playgroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
