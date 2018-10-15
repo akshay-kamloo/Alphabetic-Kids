@@ -1,0 +1,153 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Alphabetic_Kids.LKG_Maths.number_comparison"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Alphabetic_Kids.LKG_Maths"
+    xmlns:common="using:Alphabetic_Kids.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,68"/>
+            <TextBlock x:Name="pagesubTitle" Text="> Jr. KG (LKG) > Simple Maths > Number Comparison" Style="{StaticResource SubheaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,23"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Button x:Name="numcom_learn" Content="Learn" Margin="119,13,0,565" HorizontalAlignment="Left" Width="100" FontSize="18" Height="50" Click="numcom_learn_Click" />
+            <Button x:Name="numcom_Try" Content="Let's Try" Margin="268,13,0,565" HorizontalAlignment="Left" Width="101" FontSize="18" Height="50" Click="numcom_Try_Click"/>
+
+            <Grid x:Name="grid_learn" Visibility="Visible" Margin="0,65,0,0">
+                <MediaElement Source="/maths/com.mp4" Height="550" Width="750" AutoPlay="False" AreTransportControlsEnabled="True"/>
+            </Grid>
+
+            <Grid x:Name="grid_try" Visibility="Collapsed" Margin="0,65,0,0">
+
+                <TextBlock Text="Note: Write '&lt;' , '>' and '=' symbol as per given problem." FontSize="18" HorizontalAlignment="Right" Margin="0,0,30,540" RenderTransformOrigin="0.5,0.5"/>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="43,78,0,385">
+                    <TextBlock Text="5   ?   5" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num1_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num1_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num1" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Width="130"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="263,78,0,385">
+                    <TextBlock Text="2   ?   6" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num2_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num2_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num2" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num2_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="485,78,0,385">
+                    <TextBlock Text="1   ?   0" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num3_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num3_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num3" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num3_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="709,78,0,385">
+                    <TextBlock Text="5   ?   8" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num4_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num4_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num4" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num4_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="925,78,0,385">
+                    <TextBlock Text="7   ?   4" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num5_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num5_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num5" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" VerticalAlignment="Top" TextChanged="num5_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="1141,78,0,385">
+                    <TextBlock Text="10  ?  7" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num6_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num6_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num6" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num6_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="43,314,0,149">
+                    <TextBlock Text="6  ?  2" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num7_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num7_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num7" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num7_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="263,314,0,149">
+                    <TextBlock Text="1  ?  2" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num8_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num8_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num8" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num8_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="485,314,0,149">
+                    <TextBlock Text="6  ?  2" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num9_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num9_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num9" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num9_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="709,314,0,149">
+                    <TextBlock Text="7  ? 10" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num10_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num10_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num10" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num10_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="925,314,0,149">
+                    <TextBlock Text="1  ? 01" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num11_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num11_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num11" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num11_TextChanged"/>
+                </Grid>
+
+                <Grid HorizontalAlignment="Left" Width="182" Height="100" Margin="1141,314,0,149">
+                    <TextBlock Text="6  ?  3" Style="{ThemeResource try_text}" Height="45" Width="130" Margin="0,0,0,55"/>
+                    <Image x:Name="num12_r" Source="/images/right.png" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <Image x:Name="num12_w" Source="/images/wrong.jpg" Visibility="Collapsed" Height="46" Margin="130,26,0,28"/>
+                    <TextBox x:Name="num12" FontSize="20" Opacity="50" Margin="0,50,0,0" Height="50" HorizontalAlignment="Left" Width="130" TextChanged="num12_TextChanged"/>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Page>
